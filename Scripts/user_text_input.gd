@@ -4,8 +4,7 @@ extends LineEdit
 # var a = 2
 # var b = "textvar"
 
-var responses = {["budlight"] : "correct!", ["i like cats", "i don't like dogs"]: "I'm going to bite you."} 
-var foundResponse = true
+var beerList = {["beer1"] : "correct!"} 
 
 func _ready():
 	# Called every time the node is added to the scene.
@@ -23,14 +22,9 @@ func _input(event):
 		inputText = inputText.to_lower()
 		
 		# Look for a response in the keys  of the dictionary
-		for key in responses.keys():
+		for key in beerList.keys():
 			if inputText in key:
-				get_node("../Label").set_text(responses[key])
-				foundResponse = true
+				get_node("../Label").set_text(beerList[key])
 				return
-		if foundResponse == false:
-			get_node("../Label").set_text("incorrect!")
-			
-		foundResponse = false
-	
+		get_node("../Label").set_text("incorrect!")
 

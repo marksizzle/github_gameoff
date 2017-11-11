@@ -1,0 +1,10 @@
+lager
+stout
+nitro
+ipa
+bitter
+pilsner
+porter
+bock
+lambic
+dunkel
